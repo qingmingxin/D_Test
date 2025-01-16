@@ -37,6 +37,9 @@ public class FileMetadata {
     @Size(max = 64, message = "哈希值长度不能超过 64 个字符")
     private String hashValue; // 文件内容的哈希值，保证唯一性
 
+    @NotNull(message = "数据节点ID不能为空")
+    private Long dataNodeId; // 关联的数据节点ID
+
     @NotNull(message = "创建时间不能为空")
     private LocalDateTime creationTime; // 创建时间
 
