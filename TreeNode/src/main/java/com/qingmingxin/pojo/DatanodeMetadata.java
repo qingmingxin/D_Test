@@ -32,4 +32,7 @@ public class DatanodeMetadata {
 
     @NotBlank(message = "根目录不能为空")
     private String rootDirectory; // 数据节点存放的根目录
+
+    @NotBlank(message = "公钥不能为空")
+    private String publicKey;
 }
