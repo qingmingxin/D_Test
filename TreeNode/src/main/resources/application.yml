@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: TreeNode
+  profiles:
+    active: dev
+
+---
+#????
+spring:
+  config:
+    activate:
+      on-profile: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/treenode
+    username: root
+    password: qweqwe
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+---
+#????
+
+spring:
+  config:
+    activate:
+      on-profile: test
+server:
+  port: 8081
+
+---
+# ????
+
+spring:
+  config:
+    activate:
+      on-profile: pro
